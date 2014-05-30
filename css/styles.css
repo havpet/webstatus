@@ -1,0 +1,18 @@
+#wrapper {
+	width:900px;
+	height:700px;
+	margin:0 auto;
+}
+
+.website_name {
+	font-size:25px;
+}
+
+.up {
+	color:green;
+}
+
+.down {
+	color:red;
+}
+
