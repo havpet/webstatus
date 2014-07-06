@@ -1,7 +1,8 @@
 #wrapper {
-	width:900px;
-	height:700px;
+	width:100%;
+	min-height:200px;
 	margin:0 auto;
+	text-align:center;
 }
 
 .website_name {
@@ -14,5 +15,29 @@
 
 .down {
 	color:red;
+}
+
+.imgup {
+	display:none;
+	margin:0 auto;
+	width:150px;
+}
+		
+.imgdown {
+	display:none;
+	margin:0 auto;
+	width:150px;
+}
+
+#statusimg {
+	margin-bottom:20px;
+}
+
+#bottomtimer {
+	position: fixed;
+    bottom: 0;
+    width: 100%;
+	text-align:center;
+	padding-bottom:10px;
 }
 
