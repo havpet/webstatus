@@ -56,10 +56,11 @@
 		$allup = true;
 		
 		$counter = 0;
+		$timeout = 1;
 		
 		for($i=0; $i<count($arr); $i++) {
-			$result = $s->ping($arr[$i]["address"], $arr[$i]["port"]);
-			$time = $s->measureTime($arr[$i]["address"], $arr[$i]["port"]);
+			$result = $s->ping($arr[$i]["address"], $arr[$i]["port"], $timeout);
+			$time = $s->measureTime($arr[$i]["address"], $arr[$i]["port"], $timeout);
 
 			if($counter == 1) { //Number of addresses above header
 				echo "" ;  //header
