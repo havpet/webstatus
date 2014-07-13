@@ -35,10 +35,9 @@
 		require_once('status.php');
 
 		$s = new status;
-		
+
 		
 		//change to desired addresses. You can also add new ones.
-		
 		$arr[0]["name"] = "Google";
 		$arr[0]["address"] = "google.com";
 		$arr[0]["port"] = 80;
@@ -55,11 +54,12 @@
 		$arr[3]["address"] = "95.211.73.1";
 		$arr[3]["port"] = 21;
 		
+		//initializing variables
 		$allup = true;
-		
 		$timeout = 1;
 		$avgtime = 0;
 		
+		//top row of the table
 		echo '<table>
 					<tr>
 						<td><b>Name</b></td>
@@ -68,27 +68,34 @@
 						<td><b>Response time</b></td>
 					</tr>';
 		
+		//0->number of websites
 		for($i=0; $i<count($arr); $i++) {
+		
+			//calculations
 			$result = $s->ping($arr[$i]["address"], $arr[$i]["port"], $timeout);
 			$time = $s->measureTime($arr[$i]["address"], $arr[$i]["port"], $timeout);
 			
 			$avgtime = $avgtime + $time;
 			
+			//if site is responding
 			if($result) {
 				echo '<tr class="up">
 							<td>' .$arr[$i]["name"] . '</td>
 							<td>' .$arr[$i]["address"]. '</td>
 							<td> ' .$arr[$i]["port"]. '</td>
-							<td>' .$time. ' ms</td></tr>';
+							<td>' .$time. ' ms</td>
+						</tr>';
 				
 			}
-		
+			
+			//if site is not responding
 			else {
 				echo '<tr class="down">
 							<td>' .$arr[$i]["name"] . '</td>
 							<td>' .$arr[$i]["address"]. '</td>
 							<td> ' .$arr[$i]["port"]. '</td>
-							<td>invalid</td></tr>';
+							<td>invalid</td>
+						</tr>';
 				
 				$allup = false;
 				
@@ -96,32 +103,35 @@
 			
 		}
 		
+		//last row (average response time)
 		echo '<tr style="border-top:2px solid #999">
 					<td>Average: </td>
 					<td></td>
 					<td></td>
-					<td>' . round($avgtime/count($arr), 2) . ' ms</td></tr>';
+					<td>' . round($avgtime/count($arr), 2) . ' ms</td>
+				</tr>';
 		
-		//checking if all sites are running
+		//if all sites are running, show success at top
 		if($allup) {
 				echo '<style type="text/css">
 		
-				.imgup {
-					display:initial;
-				}
+							.imgup {
+								display:initial;
+							}
 	
-				</style>';
+						</style>';
 		}
-			
+		
+		//if any of the sites are down, show red cross
 		else {
 				
 			echo '<style type="text/css">
 		
-			.imgdown {
-				display:initial;
-			}
+						.imgdown {
+							display:initial;
+						}
 	
-			</style>';
+					</style>';
 		}
 		
 		
