@@ -2,11 +2,8 @@
 
 class status {
 	
-	public function ping($ip, $port) {
+	public function ping($ip, $port, $timeout) {
 		$isUp = false;
-		
-		//maximum responding time
-		$timeout = 1;
 		
 		$fp = @fsockopen($ip,$port,$errCode,$errStr,$timeout);
 		
