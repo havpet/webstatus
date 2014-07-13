@@ -6,7 +6,7 @@ td, th {
   border: 1px solid #999;
   padding: 0.5rem;
   text-align: left;
-  min-width:200px;
+  min-width:100px;
   width:100%;
 }
 
@@ -44,14 +44,6 @@ td, th {
 
 #statusimg {
 	margin-bottom:20px;
-}
-
-#bottomtimer {
-	position: fixed;
-    bottom: 0;
-    width: 100%;
-	text-align:center;
-	padding-bottom:10px;
 }
 
 
