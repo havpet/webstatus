@@ -11,6 +11,8 @@ class status {
 			$isUp = true;
 		} 
 		
+		fclose($fp);
+		
 		return $isUp;
 	}
 	
@@ -22,10 +24,7 @@ class status {
 		
 		//last parameter represents desired number of decimals
 		return round($totaltime, 2);
-	}
-	
-	
-
+    }
 }
 
 ?>
