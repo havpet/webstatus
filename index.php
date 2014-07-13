@@ -57,10 +57,13 @@
 		
 		$counter = 0;
 		$timeout = 1;
+		$avgtime = 0;
 		
 		for($i=0; $i<count($arr); $i++) {
 			$result = $s->ping($arr[$i]["address"], $arr[$i]["port"], $timeout);
 			$time = $s->measureTime($arr[$i]["address"], $arr[$i]["port"], $timeout);
+			
+			$avgtime = $avgtime + $time;
 
 			if($counter == 1) { //Number of addresses above header
 				echo "" ;  //header
@@ -81,6 +84,8 @@
 			$counter++;
 			
 		}
+		
+		echo 'Average time: ' . round($avgtime/count($arr), 2);
 		
 		if($allup) {
 				echo '<style type="text/css">
