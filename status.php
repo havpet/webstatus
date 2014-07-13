@@ -14,7 +14,7 @@ class status {
 		return $isUp;
 	}
 	
-	public function measureTime($ip, $port) {
+	public function measureTime($ip, $port, $timeout) {
 		$time1 = microtime(true);
 		$fp = @fsockopen($ip,$port,$errCode,$errStr,$timeout);
 		
