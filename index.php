@@ -66,7 +66,7 @@
 						<td><b>Address</b></td>
 						<td><b>Port</b></td>
 						<td><b>Response time</b></td>
-					 /tr>';
+					 </tr>';
 		
 		//0->number of websites
 		for($i=0; $i<count($arr); $i++) {
