@@ -40,16 +40,20 @@
 		//change to desired addresses. You can also add new ones.
 		
 		$arr[0]["name"] = "Google";
-		$arr[0]["address"] = "www.google.com";
+		$arr[0]["address"] = "google.com";
 		$arr[0]["port"] = 80;
 		
 		$arr[1]["name"] = "Apple";
-		$arr[1]["address"] = "www.apple.com";
+		$arr[1]["address"] = "apple.com";
 		$arr[1]["port"] = 80;
 		
 		$arr[2]["name"] = "Havpet";
-		$arr[2]["address"] = "www.havpet.no";
-		$arr[2]["port"] = 80; //testing
+		$arr[2]["address"] = "havpet.no";
+		$arr[2]["port"] = 80;
+		
+		$arr[3]["name"] = "Webfaction";
+		$arr[3]["address"] = "95.211.73.1";
+		$arr[3]["port"] = 21;
 		
 		$allup = true;
 		
@@ -70,7 +74,7 @@
 			}
 		
 			else {
-				echo '<tr class="down"><td>' .$arr[$i]["name"] . ' seems to be down. </td><td>invalid</td></tr>';
+				echo '<tr class="down"><td>' .$arr[$i]["name"] . '</td><td>' .$arr[$i]["address"]. '</td><td> ' .$arr[$i]["port"]. '</td><td>invalid</td></tr>';
 				
 				$allup = false;
 				
