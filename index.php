@@ -47,7 +47,7 @@
 		
 		$arr[1]["name"] = "Apple";
 		$arr[1]["address"] = "www.apple.com";
-		$arr[1]["port"] = 80; //testing
+		$arr[1]["port"] = 80;
 		
 		$arr[2]["name"] = "Havpet";
 		$arr[2]["address"] = "www.havpet.no";
@@ -58,6 +58,8 @@
 		$counter = 0;
 		$timeout = 1;
 		$avgtime = 0;
+		
+		echo '<table><tr><td><b>Website</b></td><td><b>Response time</b></td></tr>';
 		
 		for($i=0; $i<count($arr); $i++) {
 			$result = $s->ping($arr[$i]["address"], $arr[$i]["port"], $timeout);
@@ -70,12 +72,12 @@
 			}
 			
 			if($result) {
-				echo '<div class="up">' .$arr[$i]["name"] . ' (port ' .$arr[$i]["port"]. ') is up! Time: ' .$time. ' ms</div>';
+				echo '<tr class="up"><td>' .$arr[$i]["name"] . ' (port ' .$arr[$i]["port"]. ') is up!</td><td>' .$time. ' ms</td></tr>';
 				
 			}
 		
 			else {
-				echo '<div class="down">' .$arr[$i]["name"] . ' seems to be down. </div>';
+				echo '<tr class="down"><td>' .$arr[$i]["name"] . ' seems to be down. </td><td>invalid</td></tr>';
 				
 				$allup = false;
 				
@@ -85,8 +87,9 @@
 			
 		}
 		
-		echo 'Average time: ' . round($avgtime/count($arr), 2);
+		echo '<tr style="border-top:2px solid #999"><td>Average response time: </td><td>' . round($avgtime/count($arr), 2) . ' ms</td></tr>';
 		
+		//checking if all sites are running
 		if($allup) {
 				echo '<style type="text/css">
 		
@@ -109,7 +112,7 @@
 		}
 		
 		
-			
+		echo '</table>';
 	?>
 	
 	<br />
