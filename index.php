@@ -66,7 +66,7 @@
 						<td><b>Address</b></td>
 						<td><b>Port</b></td>
 						<td><b>Response time</b></td>
-					</tr>';
+					 /tr>';
 		
 		//0->number of websites
 		for($i=0; $i<count($arr); $i++) {
@@ -84,7 +84,7 @@
 							<td>' .$arr[$i]["address"]. '</td>
 							<td> ' .$arr[$i]["port"]. '</td>
 							<td>' .$time. ' ms</td>
-						</tr>';
+						 </tr>';
 				
 			}
 			
@@ -95,7 +95,7 @@
 							<td>' .$arr[$i]["address"]. '</td>
 							<td> ' .$arr[$i]["port"]. '</td>
 							<td>invalid</td>
-						</tr>';
+						 </tr>';
 				
 				$allup = false;
 				
@@ -109,7 +109,7 @@
 					<td></td>
 					<td></td>
 					<td>' . round($avgtime/count($arr), 2) . ' ms</td>
-				</tr>';
+				 </tr>';
 		
 		//if all sites are running, show success at top
 		if($allup) {
@@ -119,7 +119,7 @@
 								display:initial;
 							}
 	
-						</style>';
+						 </style>';
 		}
 		
 		//if any of the sites are down, show red cross
@@ -131,7 +131,7 @@
 							display:initial;
 						}
 	
-					</style>';
+					 </style>';
 		}
 		
 		
