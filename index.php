@@ -138,8 +138,6 @@
 		echo '</table>';
 	?>
 	
-	<br />
-	
 </div>
 
 </body>
