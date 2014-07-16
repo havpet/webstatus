@@ -4,15 +4,10 @@ class status {
 	
 	//check if website is up
 	public function ping($ip, $port, $timeout) {
-		$isUp = false;
 		$fp = @fsockopen($ip,$port,$errCode,$errStr,$timeout);
 		
-		if($fp){   
-			$isUp = true;
-		} 
-		
 		fclose($fp);
-		return $isUp;
+		return $fp;
 	}
 	
 	//measure time used for server to respond (with fsockopen)
