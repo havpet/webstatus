@@ -54,11 +54,12 @@
 		$arr[3]["address"] = "95.211.73.1";
 		$arr[3]["port"] = 21;
 		
-		$allup = true;
-		
 		//initializing variables
-		$timeout = 1;
+		$allup = true;
 		$avgtime = 0;
+		
+		//time for request timeout in seconds. Change to desired value
+		$timeout = 1; 
 		
 		//top row of the table
 		echo '<table>
@@ -114,18 +115,16 @@
 		
 		//if all sites are running, show success at top
 		if($allup) {
-				echo '<style type="text/css">
-		
-							.imgup {
-								display:initial;
-							}
+			echo '<style type="text/css">
+						.imgup {
+							display:initial;
+						}
 	
-						 </style>';
+					 </style>';
 		}
 		
 		//if any of the sites are down, show red cross
-		else {
-				
+		else {	
 			echo '<style type="text/css">
 		
 						.imgdown {
