@@ -54,8 +54,9 @@
 		$arr[3]["address"] = "95.211.73.1";
 		$arr[3]["port"] = 21;
 		
-		//initializing variables
 		$allup = true;
+		
+		//initializing variables
 		$timeout = 1;
 		$avgtime = 0;
 		
