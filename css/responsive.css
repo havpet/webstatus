@@ -1,0 +1,16 @@
+@media (max-width:600px) {
+	.imgup {
+		width:250px;
+	}
+	
+	.hidemob {
+		display:none;
+	}
+	
+	td {
+		border-left:none;
+		border-right:none;
+		max-width:100px;
+		overflow-wrap: break-word;
+	}
+}
