@@ -34,7 +34,7 @@
 	</div>
 
 	<?php
-		require_once('status.php');
+		require_once('engine/status.php');
 
 		$s = new status;
 
