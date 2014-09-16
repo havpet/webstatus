@@ -17,7 +17,9 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<meta name="mobile-web-app-capable" content="yes">
 
-<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+	<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+	<link rel="stylesheet" type="text/css" href="css/responsive.css"/>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
 
 
 </head>
@@ -67,7 +69,7 @@
 						<td><b>Name</b></td>
 						<td><b>Address</b></td>
 						<td><b>Port</b></td>
-						<td><b>Response time</b></td>
+						<td class="hidemob"><b>Response time</b></td>
 					 </tr>';
 		
 		//0->number of websites
@@ -85,7 +87,7 @@
 							<td>' .$arr[$i]["name"] . '</td>
 							<td>' .$arr[$i]["address"]. '</td>
 							<td> ' .$arr[$i]["port"]. '</td>
-							<td>' .$time. ' ms</td>
+							<td class="hidemob">' .$time. ' ms</td>
 						 </tr>';
 				
 			}
@@ -96,7 +98,7 @@
 							<td>' .$arr[$i]["name"] . '</td>
 							<td>' .$arr[$i]["address"]. '</td>
 							<td> ' .$arr[$i]["port"]. '</td>
-							<td>invalid</td>
+							<td class="hidemob">invalid</td>
 						 </tr>';
 				
 				$allup = false;
@@ -106,7 +108,7 @@
 		}
 		
 		//last row (average response time)
-		echo '<tr style="border-top:2px solid #999">
+		echo '<tr class="hidemob" style="border-top:2px solid #999">
 					<td>Average: </td>
 					<td></td>
 					<td></td>
