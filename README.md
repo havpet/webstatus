@@ -10,5 +10,8 @@ You'll be able to list the following information:
 - Response time
 - Total response time
 
+The application is also optimized for mobile phones through responsiveness.
 
 Demo: http://dev.havpet.no/statusdev/
+
+
