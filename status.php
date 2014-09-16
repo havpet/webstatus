@@ -13,7 +13,7 @@ class status {
 	//measure time used for server to respond (with fsockopen)
 	public function measureTime($ip, $port, $timeout) {
 		$time1 = microtime(true);
-		$fp = @fsockopen($ip,$port,$errCode,$errStr,$timeout);
+		$this->ping($ip, $port, $timeout);
 		$totaltime = (microtime(true) - $time1)*1000;
 		
 		return round($totaltime, 2);
