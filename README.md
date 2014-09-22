@@ -8,9 +8,18 @@ You'll be able to list the following information:
 - Address
 - Port
 - Response time
-- Total response time
+- Average response time
 
 The application is also optimized for mobile phones through responsiveness.
+
+=========
+
+Functions:
+
+- *function ping()* - pinging server with parametres $ip, $port and $timeout
+- *function measureTime()* - measuring time used for pinging server with parametres $ip, $port and $timeout
+
+=========
 
 Demo: http://dev.havpet.no/statusdev/
 
